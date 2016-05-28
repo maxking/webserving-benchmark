@@ -25,6 +25,9 @@ RUN sed -i 's/^ServerSignature/#ServerSignature/g' /etc/apache2/conf-enabled/sec
 ADD 000-default.conf /etc/apache2/sites-enabled/000-default.conf
 ADD 001-default-ssl.conf /etc/apache2/sites-enabled/001-default-ssl.conf
 
+ADD data /etc/apache2/external/
+ADD data /var/www/html/
+
 EXPOSE 80
 EXPOSE 443
 
